@@ -1,0 +1,48 @@
+@use 'variables' as v;
+
+/** Media Queries **/
+@mixin phone {
+    @media (min-width: #{v.$phone_mq}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{v.$tablet}) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media (min-width: #{v.$desktop}) {
+        @content;
+    }
+}
+@mixin grid($columnas, $espaciado) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+    grid-template-rows: auto auto;
+}
+
+//botones
+@mixin button($bgColor,$display){
+    background-color: $bgColor;
+    display: $display;
+    color: v.$white;
+    font-weight: v.$bold;
+    font-size: 2.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    text-align: center;
+    border: .5rem double v.$darkBlue;    
+    border-radius: 1rem;
+
+    //esto es como si la pseudo clase se aplicara al elemento que esta llamando al mixin
+    &:hover{
+       background-color: darken($bgColor, 5);
+       cursor: pointer; 
+    }
+
+}

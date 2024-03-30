@@ -1,0 +1,48 @@
+@use 'variables' as v;
+
+.section {
+    margin-top: calc(v.$separation / 2);
+    margin-bottom: calc(v.$separation / 2);
+}
+.container-center {
+    max-width: 80rem;
+}
+
+.align-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.align-center{
+    display: flex;
+    justify-content: center;
+}
+
+
+.w-100{
+    width: 100%;
+}
+
+
+.h-50{
+    height: 5rem;
+}
+
+.h-100-cover{
+    height: 100%;
+    object-fit: cover;
+}
+
+.relative{
+    position: relative;
+}
+
+.separation{
+    margin: 3rem 0 3rem 0;
+    border-top: 1px solid v.$white;
+}
+
+.hidden{
+    display: none;
+}

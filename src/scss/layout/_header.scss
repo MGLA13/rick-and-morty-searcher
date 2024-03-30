@@ -1,0 +1,35 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+
+.header{
+    background-color: v.$darkBlue;
+    padding: 1rem 0 3rem 0;
+}
+
+
+.bar{
+
+    @include m.tablet{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 12rem;
+    }
+
+    .image-container{
+
+        width: auto;
+        
+        @include m.tablet{
+            img{
+                max-width: 35rem;
+                max-height: 15rem;
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,145 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.results-container{
+
+    padding: 1.5rem;
+
+    @include m.tablet{
+
+        flex: 0 0 60%;
+        height: 54rem;
+        overflow-y: auto;
+        margin-top: 2rem;
+        padding: 0 .5rem 0 2rem;
+    
+    }
+    
+    .buttons-container{
+        margin-top: 4rem;
+
+        @include m.tablet{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 3rem;
+        }
+
+        button{
+            width: 100%;
+           
+            &:first-of-type{
+                margin-bottom: 2rem;
+            }
+            
+            @include m.tablet{
+                width: 35%;
+
+                &:first-of-type{
+                    margin: 0;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+
+.result{
+
+    background-color: v.$lightGray2;
+    margin-bottom: 2rem;
+    border: 2px solid v.$blue;
+    border-radius: 1rem;
+
+    @include m.tablet{
+        display: flex;
+    }
+
+    &:last-of-type{
+        margin: 0;
+    }
+    
+
+    .image-result-container{
+
+
+        @include m.tablet{
+            flex: 0 0 25rem;
+        }
+    
+        img{
+
+            border-top-right-radius: 1rem;
+            border-top-left-radius: 1rem;
+
+            @include m.tablet{
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 1rem;
+            }
+    
+        }
+    }
+
+
+    .features-result-container{
+
+        @include m.tablet{
+            flex: 1;
+        }
+
+        padding: 0 1.5rem;
+
+    }
+    
+
+}
+
+
+.result-info{
+
+    p, h3{
+        margin: 0;
+    }
+
+    h3{
+
+        color: v.$white;
+        font-weight: v.$black;
+
+    }
+
+    p{
+        color: v.$white;
+
+        span{
+            font-weight: v.$bold;
+            text-shadow: 1px 1px 2px v.$blackColor;
+        }
+    }
+
+    .text-gray{
+        color: v.$textGray;
+        font-size: 1.6rem;
+    }
+
+    .info{
+        font-size: 1.8rem;
+    }
+
+}
+
+
+.message{
+
+    color: v.$white;
+    font-weight: v.$bold;
+
+    span{
+        font-weight: v.$black;
+    }
+
+}

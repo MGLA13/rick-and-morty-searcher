@@ -1,0 +1,84 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.searcher{
+
+    margin: 3rem 0;
+
+
+    h1{
+        color: v.$white;
+        font-weight: v.$bold;
+        margin-top: 2rem;
+    }
+
+
+    input{
+        
+        padding: 1rem;
+        width: 100%;
+        background-color: v.$white;
+        border: 3px solid v.$blue;
+        border-radius: 1rem;
+
+        @include m.tablet{
+            width: 40%;
+        }
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+}
+
+.mobile-filters{
+
+    background-color: v.$lightGray2;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include m.tablet{
+        display: none;
+    }
+
+    .filter-title{
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        p{
+            color: v.$white;
+            font-weight: v.$bold;
+            font-size: 2.8rem;
+            margin: 0;
+        }
+
+        img{
+            width: 15%;
+        }
+
+    }
+    
+
+}
+
+
+.icon-filter{
+
+    filter: invert(100%);
+
+    &.ico-filter-width{
+        width: 5%;
+    }
+}
+
+

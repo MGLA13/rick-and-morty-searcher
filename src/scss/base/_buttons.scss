@@ -1,0 +1,14 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.blue-buttom-block{
+    @include m.button(v.$lightBlue, block);
+}
+
+.blue-buttom{
+    @include m.button(v.$lightBlue, inline-block);
+}
+
+
+
+

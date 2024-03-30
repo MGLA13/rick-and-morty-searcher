@@ -1,0 +1,20 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.container-sections{
+
+    background-color: v.$lightGray;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+
+    @include m.tablet{
+
+        display: flex;
+        gap: 4rem;
+        height: 60rem;
+        
+    }
+    
+}

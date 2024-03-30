@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty searcher</title>
+    <link rel="icon" type="image/jpeg" href="./build/img/favicon.jpeg">
+    <link rel="stylesheet" href="./build/css/app.css">
+</head>
+<body>
+    <div class="relative">
+        <header class="header">
+            <div class="container bar">
+                <a href="index.html" class="image-container">
+                    <picture>
+                        <source srcset="./build/img/header.webp" type="image/webp">
+                        <source srcset="./build/img/header.png" type="image/png">
+                        <img loading="lazy" src="./build/img/header.png" alt="Logo">
+                    </picture>
+                </a>
+            </div>
+        </header>
+
+        <div class="container">
+
+            <main class="searcher">
+
+                <h1 id="title-resource">Search name characters</h1>
+
+                <div class="align-center">
+                    <input type="text" placeholder="write here" id="input-search" value="">
+                </div>
+
+                <div class="mobile-filters">
+                    <div class="filter-title">
+                        <img class="icon-filter" src="./build/img/filters.svg" alt="Icon filters" title="Icon filters">
+                        <p>Filters</p>
+                    </div>
+                    <img class="icon-filter ico-filter-width" src="./build/img/down.svg" alt="Icon options filters">
+                </div>
+
+            </main>
+
+            <div class="container container-sections">
+                <div class="results-container">
+                    <section class="characters-container">
+
+                    </section>    
+                </div>
+                <section class="filters">
+                    <div class="filter-close-mobile-menu align-center">
+                        <div class="align-center" title="close filters">
+                            <img class="icon-filter" src="./build/img/close.svg" alt="Icon close filters">
+                        </div>    
+                    </div>
+                    <div class="filters-container position">    
+                        <div class="filter filter-clear">
+                            <p>Filters</p>
+                            <p id="clear-filters">Clear filters</p>
+                        </div>
+                    </div>       
+                </section>
+            </div>
+        </div>    
+        <footer class="footer">
+            <div class="info-footer">
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="./build/js/bundle.min.js"></script>
+</body>
+</html>

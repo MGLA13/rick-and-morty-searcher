@@ -1,0 +1,31 @@
+@use 'base/variables' as v;
+
+.footer{
+
+    background-color: v.$darkBlue;
+    padding: 2.5rem;
+
+
+    p{
+        font-weight: v.$bold;
+        color: v.$white;
+        text-align: center;
+        margin: 0;
+    }
+
+}
+
+
+.info-footer{
+
+    margin-bottom: 3rem;
+
+    p{
+
+        color: v.$textGray;
+        text-transform: uppercase;
+        font-weight: v.$bold;
+        font-size: 1.6rem;
+        
+    }
+}

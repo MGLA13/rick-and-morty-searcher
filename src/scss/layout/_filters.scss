@@ -1,0 +1,140 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.filters{
+
+    position: absolute;
+    right: -100rem;
+    top: 0;
+
+    &.static{
+        position: static;
+    }
+
+    width: 100%;
+    background-color: darken(v.$darkGray,10);
+
+
+    @include m.tablet{
+        position: static;
+        flex: 1rem;
+        background-color: transparent;
+        height: 35rem;
+        overflow-y: auto;
+        margin-top: 4rem;
+    }
+
+    .filter-close-mobile-menu{
+
+        margin: 2rem;
+
+        @include m.tablet{
+            display: none;
+        }
+
+        div{
+            background-color: v.$lightGray2;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 100%;
+            cursor: pointer;
+
+            img{
+                width: 50%;
+            }
+        }        
+
+    }
+
+    .filter-title::first-letter{
+        text-transform: uppercase;
+    }
+
+}
+
+
+.filters-container{
+
+    padding: 2rem;
+
+    @include m.tablet{
+        padding: 0 .5rem 0 0;
+    }
+
+    .filter{
+        background-color: v.$lightGray2;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+
+        &:last-of-type{
+            margin: 0;
+        }
+
+    }
+}
+
+
+.filter-clear{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    p{
+        color: v.$white;
+        margin: 0;
+        font-size: 1.4rem;
+
+        &:first-of-type{
+            font-size: 2.8rem;
+            font-weight: v.$bold;
+        }
+
+        &:last-of-type{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.filter-search{
+
+    p{
+        color: v.$white;
+        margin: 0 0 1rem 0;
+        font-size: 2.3rem;  
+    }
+
+    .filter-search-options{
+
+        margin: 0;
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        li{
+            color: v.$white;
+            list-style: none;
+            background-color: darken(v.$darkGray,5);
+            padding: 1rem;
+            border-radius: 1rem;
+            text-align: center;
+            cursor: pointer;
+            width: auto;
+
+            &.selected{
+                color: v.$blackColor;
+                background-color: darken(v.$textGray,1);
+            }
+
+            @include m.tablet{
+                width: 40%;
+            }
+        }
+    }
+
+
+}
