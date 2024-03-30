@@ -460,7 +460,6 @@ function getUrlParameters(){
         queryUrlParameters += `${value.characterQuery}${key}=${value.value}`;
     }
 
-    console.log(queryUrlParameters);
     return queryUrlParameters;
 
 }
