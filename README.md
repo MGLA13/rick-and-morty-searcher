@@ -51,9 +51,9 @@ Now you can run tasks or use Gulp.
 
 You can open `index.html` in some browser to see the functionality of the page.
 
-You can edit folder files of `src/scss` to change the styles of the page. The auto-updates as you edit the file.
+You can edit directory files of `src/scss` to change the styles of the page. The auto-updates as you edit the file.
 
-You can edit folder files of `src/js` to modifing the events of the page. The auto-updates as you edit the file.
+You can edit directory files of `src/js` to modifing the events of the page. The auto-updates as you edit the file.
 
 
 ### Built with
